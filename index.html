@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery</title>
-    <link rel="stylesheet" href="./styles.css">
-  </head>
-  <body>
-    <script src="./script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Oodle.fun</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" id="h1_div">
+          <h1>Oodle.fun</h1>
+        </a>
+        <button id="themeBtn" aria-label="Toggle theme"></button>
+      </header>         
+  <main>
+    <div id="games_container">
+      <!-- Row 1 -->
+      <div class="games" id="games1">
+        <a href="color_picker.html"><div class="game" id="game1"><img src="color_picker.png" alt="color_picker"></div></a>
+        <div class="game" id="game2">Coming Soon!</div>
+        <div class="game" id="game3">Coming Soon!</div>
+      </div>
+
+      <!-- Row 2 -->
+      <!-- <div class="games" id="games2">
+        <div class="game" id="game4">Tool 4</div>
+        <div class="game" id="game5">Tool 5</div>
+        <div class="game" id="game6">Tool 6</div>
+      </div> -->
+
+      <!-- Row 3 -->
+      <!-- <div class="games" id="games3">
+        <div class="game" id="game7">Tool 7</div>
+        <div class="game" id="game8">Tool 8</div>
+        <div class="game" id="game9">Tool 9</div>
+      </div> -->
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
