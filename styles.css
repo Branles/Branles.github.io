@@ -1,1 +1,141 @@
+  :root {
+    --c0: #ffffff;  /* white */
+    --c1: #ECFAE5;
+    --c2: #DDF6D2;
+    --c3: #CAE8BD;
+    --c4: #B0DB9C;
+  }
+  
+  
+  :root {
+    /* Change this to resize every game square */
+    --game-size: 350px;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--c0); /* Light green background */
+  }
+  
+  :root {
+    --header-size: 3rem; /* adjust to taste */
+  }
+  
+  /* Header flex layout */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--c0);    /* starting color */
+    padding: 1rem 1rem;
+  }
 
+  
+  /* Your big link-as-box */
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;                    /* or whatever you had */
+    height: var(--header-size);
+    background-color: var(--c1);
+    border: 1px solid var(--c2);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+  
+  a:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+  header a h1 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* The square button */
+  #themeBtn {
+    width: var(--header-size);
+    height: var(--header-size);
+    aspect-ratio: 1 / 1;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--c1);     /* the “next” color in your cycle */
+    border: 1px solid var(--c2);
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+
+  #themeBtn img {
+  max-width: 1.5rem;
+  max-height: 1.5rem;
+  width: auto;
+  height: auto;
+}
+
+
+  
+  #themeBtn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+  
+
+  main {
+    background-color: var(--c0);
+    padding: 0 2rem 2rem 2rem;
+  }
+
+  #games_container {
+    background-color: var(--c0);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;              /* Space between rows */ 
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .games {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;                /* Space between items in a row */ 
+  }
+  
+  .games > a {
+    display: contents;    /* children (.game) are laid out as if the <a> wasn’t there */
+  }
+
+  .game {
+    /* Fixed width, height follows 1:1 aspect ratio */
+    width: var(--game-size);
+    aspect-ratio: 1 / 1;      /* Perfect square :contentReference[oaicite:0]{index=0} */
+    
+    background-color: var(--c1);     /* the “next” color in your cycle */
+    border: 1px solid var(--c2);
+    border-radius: 0.5rem;      /* Rounded corners :contentReference[oaicite:1]{index=1} */
+    
+    /* Center text */
+    display: flex;
+    align-items: center;      /* Vertical centering :contentReference[oaicite:2]{index=2} */
+    justify-content: center;  /* Horizontal centering :contentReference[oaicite:3]{index=3} */
+    
+    transition: transform 0.2s ease-in-out;  /* Smooth animation :contentReference[oaicite:4]{index=4} */
+  }
+
+  .game img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    border-radius: 0.5rem;  
+  }
+  
+  .game:hover {
+    transform: scale(1.05);   /* Pop-out effect :contentReference[oaicite:5]{index=5} */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  }
+  
