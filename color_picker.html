@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="color_picker.css" />
+  <title>Oodle.fun</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" id="h1_div">
+          <h2>Oodle.fun</h2>
+        </a>
+        <h1>Color Picker</h1>
+        <button id="themeBtn" aria-label="Toggle theme"></button>
+      </header>         
+  <main>
+    
+    <div id="color_container">
+        <!-- Standard Mode Picker -->
+        <div class="picker standard-mode" data-mode="Standard Picker">
+          <div id="canvass">
+            <canvas id="hueSlider" width="30" height="200"></canvas>
+            <canvas id="shadeBoard" width="200" height="200"></canvas>
+          </div>
+          <div class="output">
+            <input id="colorHex" readonly>
+            <button id="copyBtn">Copy</button>
+          </div>
+        </div>
+      
+        <!-- Image Mode Picker -->
+        <div class="picker image-mode" data-mode="Image Picker">
+          <input type="file" id="imgLoader" accept="image/*">
+          <div id="canvass">
+            <canvas id="imageCanvas" width="300" height="300"></canvas>
+          </div>
+          <div class="output">
+            <input id="imgColorHex" readonly>
+            <button id="copyImgBtn">Copy</button>
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <!-- Load scripts in correct order -->
+  <script src="script.js"></script>
+  <script src="color_picker.js"></script>
+</body>
+</html>
